@@ -1,0 +1,1 @@
+../sonar-scanner/bin/sonar-scanner.bat -D"sonar.login=token"
