@@ -1,4 +1,0 @@
-project1c/src/*
-!project1c/src/.gitkeep
-sonar-scanner/
-sonarqube/downloads/*.jar
