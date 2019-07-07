@@ -1,0 +1,5 @@
+FROM sonarqube:lts
+
+# качаем два плагина, кладем в каталог /opt/sonarqube/extensions/downloads
+RUN wget -P /opt/sonarqube/extensions/downloads https://github.com/1c-syntax/sonar-bsl-plugin-community/releases/download/v0.6.0/sonar-bsl-plugin-community-0.6.0.jar
+RUN wget -P /opt/sonarqube/extensions/downloads https://github.com/silverbulleters/sonar-l10n-ru/releases/download/v1.9/sonar-l10n-ru-plugin-1.9.jar
