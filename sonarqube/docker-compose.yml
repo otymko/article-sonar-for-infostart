@@ -1,7 +1,7 @@
 version: "3"
 services:
   sonar:
-    build: ./sonarqube
+    build: ./
     ports:
       - 9000:9000
     networks:
@@ -10,10 +10,6 @@ services:
       - sonar.jdbc.url=jdbc:postgresql://postgresql:5432/sonar
     depends_on:
       - postgresql
-    volumes:
-      - sonarqube_conf:/opt/sonarqube/conf
-      - sonarqube_data:/opt/sonarqube/data
-      - sonarqube_extensions:/opt/sonarqube/extensions
   postgresql:
     image: postgres
     networks:
@@ -28,8 +24,5 @@ networks:
   sonarnetwork:
     driver: bridge
 volumes:
-  sonarqube_conf:
-  sonarqube_data:
-  sonarqube_extensions:
   postgresql:
   postgresql_data:

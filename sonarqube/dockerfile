@@ -1,0 +1,5 @@
+FROM sonarqube:lts
+
+RUN mkdir /opt/sonarqube/extensions/downloads
+RUN chmod +x /opt/sonarqube/extensions/downloads
+COPY ./downloads/. /opt/sonarqube/extensions/downloads
